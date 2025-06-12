@@ -21,6 +21,10 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
     sudo apt-get install python3-dev
     pip install gpiod
 
+## Docker y Portainer
+
+(A COMPLETAR)
+
 ## Utilizacion de scripts
 
 (A COMPLETAR)
