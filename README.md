@@ -67,7 +67,6 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
         pip install picamera2
 
-
 ### Sensor de temperatura sumergible
 
 (A COMPLETAR)
@@ -80,3 +79,4 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
 - Pinout: <https://pinout.xyz/>
 - Video de conexion y uso de display oled: <https://www.youtube.com/watch?app=desktop&v=n0dHQSTSilM>
+- Video de uso de PiCamera: <https://www.youtube.com/watch?v=VeWBYRpodnI>
