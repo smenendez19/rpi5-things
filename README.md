@@ -60,10 +60,10 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
 ## Sensores probados
 
-### Camara
+### Camara Raspberry PI Camera v1.3 5MP OV5647 
 
-- Raspberry PI Camera v1.3
-- Se conecta desde el cable flex de 22 a 15 pines.
+- Una camara para la Raspberry PI sin necesidad de usar pines.
+- Se conecta con un cable flex de 22 a 15 pines.
 - Para poder utilizarlo se puede iniciar desde rpicam
 
         rpicam-hello # Prueba de que la camara funciona
