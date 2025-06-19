@@ -87,12 +87,12 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
 ## Ruta de carpetas
 
-pi-things/
-├─ docker
-│  ├─ requirements.txt
-├─ hardware
-├─ .gitignore
-├─ README.md
+        pi-things/
+        ├─ docker
+        │  ├─ requirements.txt
+        ├─ hardware
+        ├─ .gitignore
+        ├─ README.md
 
 ## Links utils
 
