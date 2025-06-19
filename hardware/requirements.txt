@@ -1,4 +1,5 @@
-adafruit-circuitpython-displayio-ssd1306
+adafruit-circuitpython-ssd1306
 lgpio
 pillow
 gpiod
+picamera2

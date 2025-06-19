@@ -47,7 +47,6 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 - Se deben soldar los 4 pines (si se necesita ya que vienen desarmados por lo general).
 - Para poder programarlo con Python hay que instalar lo siguiente:
 
-        pip install adafruit-circuitpython-displayio-ssd1306
         pip install adafruit-circuitpython-ssd1306
         pip install lgpio
 - Es monocromatico, solo tiene color blanco y negro.
@@ -88,7 +87,12 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
 ## Ruta de carpetas
 
-(A COMPLETAR)
+pi-things/
+├─ docker
+│  ├─ requirements.txt
+├─ hardware
+├─ .gitignore
+├─ README.md
 
 ## Links utils
 
