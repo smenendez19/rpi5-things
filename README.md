@@ -43,7 +43,7 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 ### Display OLED SSD1306
 
 - Es un actuador que funciona con 5v y 4 pines conectados.
-- Produce una imagen pixelada de 128x64 px
+- Produce una imagen pixelada de 128x64
 - Se deben soldar los 4 pines (si se necesita ya que vienen desarmados por lo general).
 - Para poder programarlo con Python hay que instalar lo siguiente:
 
@@ -89,8 +89,8 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
         pi-things/
         ├─ docker
-        │  ├─ requirements.txt
         ├─ hardware
+        |  ├─ requirements.txt
         ├─ .gitignore
         ├─ README.md
 
