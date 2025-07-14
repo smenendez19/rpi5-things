@@ -79,6 +79,12 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 
         sudo raspi-config
 
+- A su vez se debe activar la configuracion desde /boot/firmware/config.txt (Raspberry PI 5) y modificar la siguiente linea:
+
+        dtoverlay=w1-gpio,gpiopin=x
+
+Por defecto el pin gpio es el 4, pero se puede configurar por otro reemplazando la x
+
 - Para obtener la temperatura se tiene que leer el archivo en hexadecimal que otorga la lectura y transformarlo a celsius o segun convenga.
 - Para iniciar el sensor requiere ejecutar los comandos:
 
