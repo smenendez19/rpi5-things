@@ -39,6 +39,3 @@ while True:
     display.image(display_text())
     display.show()
     time.sleep(2)
-    display.image(display_image(os.path.join(os.path.dirname(__file__), "mario.png")))
-    display.show()
-    time.sleep(2)

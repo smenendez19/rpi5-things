@@ -91,6 +91,17 @@ Por defecto el pin gpio es el 4, pero se puede configurar por otro reemplazando 
         modprobe w1-gpio # Inicia el pin one-wire
         modprobe w1-therm # Inicia la lectura termica del sensor
 
+### Sensor de ultrasonido HC-SR04
+
+- Sensor de distancia que utiliza ultrasonido para medir distancias.
+- Utiliza 4 pines: VCC, GND, Trigger y Echo.
+- El pin Trigger se utiliza para enviar un pulso de 10us y el pin Echo recibe el pulso de retorno.
+- Para utilizarlo en la Raspberry PI 5 se debe utilizar la libreria lpgio para Python:
+
+        pip install lgpio
+
+- El pin Trigger se puede conectar a cualquier pin GPIO y el pin Echo se conecta a un pin GPIO que soporte interrupciones.
+
 ## Ruta de carpetas
 
         pi-things/
