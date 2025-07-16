@@ -1,6 +1,5 @@
 # Imports
 
-import os
 import time
 
 import adafruit_ssd1306
