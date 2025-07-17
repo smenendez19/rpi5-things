@@ -58,6 +58,31 @@ Si se cuenta con Python 3 para instalar las dependencias para utilizar GPIO hay 
 (IMAGEN DE CONEXION)
 (VIDEO DE FUNCIONAMIENTO)
 
+### Display TFT ST7789
+
+- Es un display RGB
+- Utiliza 8 pines
+- Funciona con 3.3v y tambien se adapta a 5v
+- Tiene un pin Blacklight que permite configurar el brillo de la pantalla incluso apagarla mientras tiene corriente.
+- Es de 135x240 pixeles
+- Para poder programarlo con Python hay que instalar lo siguiente:
+
+        pip install adafruit-circuitpython-st7789
+        pip install lgpio
+
+#### Conexiones
+
+| ST7789 Pin | Raspberry Pi 5 | GPIO | Función |
+|------------|----------------|------|---------|
+| VCC        | 3.3V (Pin 1)   | -    | Alimentación |
+| GND        | GND (Pin 6)    | -    | Tierra |
+| SCL        | Pin 23         | 11   | SPI Clock (SCK) |
+| SDA        | Pin 19         | 10   | SPI Data (MOSI) |
+| RES        | Pin 16         | 23   | Reset |
+| DC         | Pin 18         | 24   | Data/Command |
+| CS         | Pin 29         | 5    | Chip Select |
+| BLK        | Pin 32         | 12   | Backlight |
+
 ## Sensores probados
 
 ### Camara Raspberry PI Camera v1.3 5MP OV5647
