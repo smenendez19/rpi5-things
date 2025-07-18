@@ -287,3 +287,5 @@ Utiliza 4 pines: VCC, GND, Trigger y Echo.
 - Video de conexion y uso de display OLED SSD 1306: <https://www.youtube.com/watch?app=desktop&v=n0dHQSTSilM>
 - Video de uso de PiCamera: <https://www.youtube.com/watch?v=VeWBYRpodnI>
 - Articulo de uso de DS18B20 en Raspberry PI: <https://randomnerdtutorials.com/raspberry-pi-ds18b20-python/>
+- Luma LCD: <https://luma-lcd.readthedocs.io/en/latest/index.html>
+- Luma OLED: <https://luma-oled.readthedocs.io/en/latest/index.html>
