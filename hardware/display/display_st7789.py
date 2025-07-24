@@ -39,10 +39,9 @@ blk = digitalio.DigitalInOut(board.D12)
 blk.direction = digitalio.Direction.OUTPUT
 blk_pwm = pwmio.PWMOut(board.D12)
 
-# Brillo al 10%
-blk_pwm.duty_cycle = 6553   # Muy tenue
+blk_pwm.duty_cycle = 30000
 
-display_bus = FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=reset)
+display_bus = FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=reset, baudrate=8000000)
 display = ST7789(display_bus, rotation=270, width=240, height=135, rowstart=40, colstart=53)
 
 # Make the display context

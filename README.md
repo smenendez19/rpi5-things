@@ -209,6 +209,19 @@ Utiliza 8 pines en total
 | CS         | Pin 29         | 5    | Chip Select |
 | BLK        | Pin 32         | 12   | Backlight |
 
+### Pulsador Tact Switch
+
+- Es un pulsador que funciona con voltajes bajos a 5v.
+- Se utiliza para detectar eventos de pulsación.
+- Al conectarlo por defecto se encuentra en estado alto (HIGH) y al presionarlo se pone en estado bajo (LOW).
+
+#### Conexiones
+
+| Tact Switch Pin | Raspberry Pi 5 | GPIO | Función |
+|-----------------|----------------|------|---------|
+| GND             | GND            | -    | Tierra |
+| GPIO            | Pin 15         | 22   | Entrada (GPIO 22) |
+
 ## Sensores probados
 
 ### Camara Raspberry PI Camera v1.3 5MP OV5647
