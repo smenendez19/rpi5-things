@@ -13,7 +13,7 @@ NOTES = {
     "B4": 494,
     "C5": 523,
     "D5": 587,
-    "C5b": 554,  # Notas intermedias, si quieres
+    "C5b": 554,
     "A4": 440,
     "F4": 349,
     "G4": 392,
@@ -38,11 +38,10 @@ def beep(freq_hz=444, duration=1.0):
 
 
 if __name__ == "__main__":
-    time.sleep(5)
     try:
         for i in range(0, len(melody)):
             freq = NOTES[melody[i]]
-            duration = note_durations[i]
+            duration = note_durations[i] / 2
             beep(freq, duration)
     except KeyboardInterrupt:
         print("Beep interrupted by user.")
