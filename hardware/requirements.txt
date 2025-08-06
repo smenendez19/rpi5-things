@@ -1,8 +1,16 @@
+# Adafruit
 adafruit-circuitpython-ssd1306
 adafruit-circuitpython-st7789
 adafruit-circuitpython-busdevice
 adafruit-circuitpython-display-text
+
+# Raspberry pi 5
 lgpio
-pillow
 gpiod
+spidev
+
+# Camera
 picamera2
+
+# Others
+pillow

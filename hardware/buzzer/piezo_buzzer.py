@@ -5,8 +5,8 @@ import time
 import gpiod
 from gpiod.line import Direction, Value
 
-CHIP = "/dev/gpiochip0"
-BUZZER_PIN = 16
+CHIP = "/dev/gpiochip4"
+BUZZER_PIN = 18
 
 NOTES = {
     "E5": 659,
