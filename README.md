@@ -13,8 +13,9 @@
   - [Cámara Raspberry PI Camera v1.3 5MP OV5647](#camara-raspberry-pi-camera-v13-5mp-ov5647)
   - [Sensor de temperatura sumergible DS18B20](#sensor-de-temperatura-sumergible-ds18b20)
   - [Sensor de ultrasonido HC-SR04](#sensor-de-ultrasonido-hc-sr04)
+  - [Celda de carga con controlador HX711](#celda-de-carga-con-controlador-hx711)
 - [Ruta de carpetas](#ruta-de-carpetas)
-- [Links útiles](#links-utils)
+- [Links útiles](#links-utiles)
 
 ## Instalacion de dependencias Python
 
@@ -285,6 +286,40 @@ Utiliza 4 pines: VCC, GND, Trigger y Echo.
 | Trigger     | Pin 23         | 11   | Trigger (GPIO 11) |
 | Echo        | Pin 24         | 8    | Echo (GPIO 8) |
 
+### Celda de carga con controlador HX711
+
+- Amplificador de señal de 24 bits para celdas de carga y sensores de peso.
+- Convierte señales analógicas muy pequeñas de la celda de carga a valores digitales.
+- Soporta ganancias de 32, 64 y 128 para diferentes canales.
+- Para utilizarlo en la Raspberry PI 5 se debe utilizar la libreria lgpio para Python:
+
+        pip install lgpio
+
+- Requiere calibración con un peso de referencia conocido para obtener mediciones precisas.
+- El proceso incluye tarado (establecer punto cero) y calibración con peso conocido.
+
+#### Conexiones
+
+Utiliza 4 pines: VDD, VSS, DOUT y PD_SCK.
+
+| HX711 Pin | Raspberry Pi 5 | GPIO | Función |
+|-----------|----------------|------|---------|
+| VDD       | 5v             | -    | Alimentación |
+| VSS       | GND            | -    | Tierra |
+| DOUT      | Pin 16         | 23   | Data Output (GPIO 23) |
+| PD_SCK    | Pin 18         | 24   | Power Down/Serial Clock (GPIO 24) |
+
+#### Conexiones de la celda de carga
+
+La celda de carga se conecta al HX711 usando 4 cables (colores pueden variar):
+
+| Cable      | HX711 Pin | Función |
+|------------|-----------|---------|
+| Rojo       | E+        | Excitación positiva |
+| Negro      | E-        | Excitación negativa |
+| Blanco     | A-        | Señal negativa |
+| Verde      | A+        | Señal positiva |
+
 ## Ruta de carpetas
 
         pi-things/
@@ -294,7 +329,7 @@ Utiliza 4 pines: VCC, GND, Trigger y Echo.
         ├─ .gitignore
         ├─ README.md
 
-## Links utils
+## Links utiles
 
 - Pinout: <https://pinout.xyz/>
 - Video de conexion y uso de display OLED SSD 1306: <https://www.youtube.com/watch?app=desktop&v=n0dHQSTSilM>
@@ -302,3 +337,5 @@ Utiliza 4 pines: VCC, GND, Trigger y Echo.
 - Articulo de uso de DS18B20 en Raspberry PI: <https://randomnerdtutorials.com/raspberry-pi-ds18b20-python/>
 - Luma LCD: <https://luma-lcd.readthedocs.io/en/latest/index.html>
 - Luma OLED: <https://luma-oled.readthedocs.io/en/latest/index.html>
+- Video de uso de balanza con celda de carga y hx711: <https://www.youtube.com/watch?v=Z01gjTLE5eE>
+- Uso del sensor de ultrasonido HC-SR04: <https://docs.sunfounder.com/projects/umsk/es/latest/05_raspberry_pi/pi_lesson23_ultrasonic.html>
