@@ -241,6 +241,7 @@ Utiliza 8 pines en total
 
 - Sensor digital de temperatura sumergible para liquidos.
 - Utiliza 3 pines: 5v, GND y DQ (O pin gpio compatible con one-wire).
+- Se debe utilizar una resistencia de pull-up de 4.7k ohmios (minimo) entre el pin DQ y el pin VCC.
 - Antes de utilizarlo se debe activar la comunicacion One-Wire desde la configuracion de Raspberry Pi en la terminal:
 
         sudo raspi-config
@@ -261,9 +262,9 @@ Por defecto el pin gpio es el 4, pero se puede configurar por otro reemplazando 
 
 | DS18B20 Pin | Raspberry Pi 5 | GPIO | Función |
 |-------------|----------------|------|---------|
-| VCC         | 5v             | -    | Alimentación |
-| GND         | GND            | -    | Tierra |
-| DQ          | Pin 4          | 4    | One-Wire Data |
+| VCC (Rojo)  | 5v             | -    | Alimentación |
+| GND (Negro) | GND            | -    | Tierra |
+| DQ  (Amarillo) | Pin 4      | 4    | One-Wire Data |
 
 ### Sensor de ultrasonido HC-SR04
 
