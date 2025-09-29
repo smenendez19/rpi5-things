@@ -83,6 +83,9 @@ class HX711:
     def set_scale(self, scale):
         self.scale = scale
 
+    def set_offset(self, offset):
+        self.offset = offset
+
     def close(self):
         lgpio.gpiochip_close(self.h)
 
@@ -96,7 +99,6 @@ if __name__ == "__main__":
         print("Tareando (celda vacía)...")
         offset = hx.tare()
         print(offset)
-
         input("Pon un peso de referencia y ENTER...")
         ref = float(input("Peso de referencia (g): "))
         if ref == 0:
