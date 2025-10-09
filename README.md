@@ -321,6 +321,30 @@ La celda de carga se conecta al HX711 usando 4 cables (colores pueden variar):
 | Blanco     | A-        | Señal negativa |
 | Verde      | A+        | Señal positiva |
 
+### Sensor de PH PH-4502C + ADS1115
+
+- Sensor de pH que utiliza un electrodo para medir la acidez o alcalinidad de una solución.
+- Se conecta a un convertidor analógico a digital (ADS1115) para leer el valor del sensor.
+- Para utilizarlo en la Raspberry PI 5 se debe utilizar la libreria lgpio para Python:
+
+        pip install lgpio 
+
+#### Conexiones
+
+Utiliza los siguientes pines:
+ADS1115: VCC, GND, SDA y SCL.
+PH-4502C: VCC, GND y PO.
+
+| PH-4502C Pin | ADS1115 Pin | Raspberry Pi 5 | GPIO | Función |
+|--------------|-|----------------|------|---------|
+| VCC          | | 3.3v             | -    | Alimentación |
+|           |VCC | 3.3v             | -    | Alimentación |
+| GND          | | GND            | -    | Tierra |
+|           | GND| GND            | -    | Tierra |
+|              | SDA| Pin 5         | 2    | Data (GPIO 2) |
+|              | SCL| Pin 6         | 3    | Clock (GPIO 3) |
+| PO           | A0 | -              | -    | Salida analógica |
+
 ## Ruta de carpetas
 
         pi-things/
