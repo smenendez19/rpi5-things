@@ -6,6 +6,7 @@
   - [Creación de entorno virtual con venv](#creacion-de-entorno-virtual-con-venv)
 - [Docker y Portainer](#docker-y-portainer)
 - [Actuadores probados](#actuadores-probados)
+  - [Rele de 5v](#rele-de-5v)
   - [Buzzer Pasivo](#buzzer-pasivo)
   - [Display OLED SSD1306](#display-oled-ssd1306)
   - [Display IPS SPI ST7789](#display-ips-spi-st7789)
@@ -145,6 +146,23 @@ Este repositorio incluye configuraciones Docker Compose para los siguientes serv
     docker exec -it <nombre_contenedor> /bin/bash
 
 ## Actuadores probados
+
+### Rele de 5v
+
+- Es un actuador que funciona con 5v.
+- Permite controlar dispositivos de mayor voltaje y corriente.
+- Se debe alimentar con 5v y GND y el pin IN se conecta a un pin GPIO para activarlo.
+- Utiliza la liberia gpiod para Python:
+
+        pip install gpiod
+
+#### Conexiones
+
+| Rele Pin | Raspberry Pi 5 | GPIO | Función |
+|----------|----------------|------|---------|
+| VCC      | 5v             | -    | Alimentación |
+| GND      | GND            | -    | Tierra |
+| IN       | Pin 11         | 20   | Control (GPIO 20) |
 
 ### Buzzer Pasivo
 
