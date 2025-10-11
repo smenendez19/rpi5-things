@@ -10,7 +10,7 @@ CONFIG_REG = 0x01
 CONVERSION_REG = 0x00
 
 # --- Calibración pH ---
-V_PH7 = 2.50  # voltaje en pH 7 (ajusta con tus mediciones)
+V_PH7 = 2.5625
 V_PH4 = 3.00  # voltaje en pH 4 (ajusta con tus mediciones)
 SLOPE = (4.0 - 7.0) / (V_PH4 - V_PH7)
 

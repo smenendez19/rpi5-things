@@ -14,6 +14,7 @@
   - [Sensor de temperatura sumergible DS18B20](#sensor-de-temperatura-sumergible-ds18b20)
   - [Sensor de ultrasonido HC-SR04](#sensor-de-ultrasonido-hc-sr04)
   - [Celda de carga con controlador HX711](#celda-de-carga-con-controlador-hx711)
+  - [Sensor de PH PH-4502C + ADS1115](#sensor-de-ph-ph-4502c--ads1115)
 - [Ruta de carpetas](#ruta-de-carpetas)
 - [Links útiles](#links-utiles)
 
