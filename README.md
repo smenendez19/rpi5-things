@@ -6,6 +6,7 @@
   - [Creación de entorno virtual con venv](#creacion-de-entorno-virtual-con-venv)
 - [Docker y Portainer](#docker-y-portainer)
 - [Actuadores probados](#actuadores-probados)
+  - [Rele de 5v](#rele-de-5v)
   - [Buzzer Pasivo](#buzzer-pasivo)
   - [Display OLED SSD1306](#display-oled-ssd1306)
   - [Display IPS SPI ST7789](#display-ips-spi-st7789)
@@ -14,6 +15,7 @@
   - [Sensor de temperatura sumergible DS18B20](#sensor-de-temperatura-sumergible-ds18b20)
   - [Sensor de ultrasonido HC-SR04](#sensor-de-ultrasonido-hc-sr04)
   - [Celda de carga con controlador HX711](#celda-de-carga-con-controlador-hx711)
+  - [Sensor de PH PH-4502C + ADS1115](#sensor-de-ph-ph-4502c--ads1115)
 - [Ruta de carpetas](#ruta-de-carpetas)
 - [Links útiles](#links-utiles)
 
@@ -144,6 +146,23 @@ Este repositorio incluye configuraciones Docker Compose para los siguientes serv
     docker exec -it <nombre_contenedor> /bin/bash
 
 ## Actuadores probados
+
+### Rele de 5v
+
+- Es un actuador que funciona con 5v.
+- Permite controlar dispositivos de mayor voltaje y corriente.
+- Se debe alimentar con 5v y GND y el pin IN se conecta a un pin GPIO para activarlo.
+- Utiliza la liberia gpiod para Python:
+
+        pip install gpiod
+
+#### Conexiones
+
+| Rele Pin | Raspberry Pi 5 | GPIO | Función |
+|----------|----------------|------|---------|
+| VCC      | 5v             | -    | Alimentación |
+| GND      | GND            | -    | Tierra |
+| IN       | Pin 11         | 20   | Control (GPIO 20) |
 
 ### Buzzer Pasivo
 
@@ -320,6 +339,30 @@ La celda de carga se conecta al HX711 usando 4 cables (colores pueden variar):
 | Negro      | E-        | Excitación negativa |
 | Blanco     | A-        | Señal negativa |
 | Verde      | A+        | Señal positiva |
+
+### Sensor de PH PH-4502C + ADS1115
+
+- Sensor de pH que utiliza un electrodo para medir la acidez o alcalinidad de una solución.
+- Se conecta a un convertidor analógico a digital (ADS1115) para leer el valor del sensor.
+- Para utilizarlo en la Raspberry PI 5 se debe utilizar la libreria lgpio para Python:
+
+        pip install lgpio 
+
+#### Conexiones
+
+Utiliza los siguientes pines:
+ADS1115: VCC, GND, SDA y SCL.
+PH-4502C: VCC, GND y PO.
+
+| PH-4502C Pin | ADS1115 Pin | Raspberry Pi 5 | GPIO | Función |
+|--------------|-|----------------|------|---------|
+| VCC          | | 3.3v             | -    | Alimentación |
+|           |VCC | 3.3v             | -    | Alimentación |
+| GND          | | GND            | -    | Tierra |
+|           | GND| GND            | -    | Tierra |
+|              | SDA| Pin 5         | 2    | Data (GPIO 2) |
+|              | SCL| Pin 6         | 3    | Clock (GPIO 3) |
+| PO           | A0 | -              | -    | Salida analógica |
 
 ## Ruta de carpetas
 
