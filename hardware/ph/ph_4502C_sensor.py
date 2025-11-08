@@ -10,9 +10,9 @@ CONFIG_REG = 0x01
 CONVERSION_REG = 0x00
 
 # --- Calibración pH ---
-V_PH7 = 2.5625
-V_PH4 = 3.00  # voltaje en pH 4 (ajusta con tus mediciones)
-SLOPE = (4.0 - 7.0) / (V_PH4 - V_PH7)
+V_PH6_84 = 2.6775
+V_PH4 = 3.1688
+SLOPE = (4.0 - 6.84) / (V_PH4 - V_PH6_84)
 
 
 # --- Función para leer el canal A0 del ADS1115 ---
@@ -38,7 +38,7 @@ print("Leyendo sensor de pH (Ctrl+C para salir)...")
 try:
     while True:
         voltaje = leer_ads1115(handle)
-        ph = 7.0 + SLOPE * (voltaje - V_PH7)
+        ph = 6.84 + SLOPE * (voltaje - V_PH6_84)
         print(f"V = {voltaje:.4f} V  |  pH ≈ {ph:.2f}")
         time.sleep(1.0)
 except KeyboardInterrupt:
