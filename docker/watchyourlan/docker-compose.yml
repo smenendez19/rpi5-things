@@ -1,5 +1,5 @@
 services:
-  wyl:
+  watchyourlan:
     container_name: watchyourlan
     image: aceberg/watchyourlan
     network_mode: "host"        
