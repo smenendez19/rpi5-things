@@ -1,11 +1,13 @@
-version: "3"
 services:
   wyl:
+    container_name: watchyourlan
     image: aceberg/watchyourlan
     network_mode: "host"        
     restart: unless-stopped
     volumes:
     - ~/.dockerdata/wyl:/data/WatchYourLAN
+    ports:
+    - "8840:8840"
     environment:
       TZ: America/Argentina/Buenos_Aires
       IFACES: "wlan0 eth0"

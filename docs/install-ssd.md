@@ -15,7 +15,7 @@ Para poder instalar y usar un SSD en la RPI5 se usaron los siguientes componente
 
 1. Actualizar las librerias de rpi5
 
-        sudo apt update && sudo apt upgrade -y
+        sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 2. Corroborar que la conexion del ssd esta correcta
 

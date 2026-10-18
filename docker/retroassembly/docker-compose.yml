@@ -1,0 +1,9 @@
+services:
+  retroassembly:
+    container_name: retroassembly
+    image: arianrhodsandlot/retroassembly
+    ports: 
+      - "8000:8000"
+    volumes: 
+      - /home/rpi5/data:/app/data
+    restart: unless-stopped

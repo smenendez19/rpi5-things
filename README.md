@@ -70,80 +70,8 @@ Portainer estará disponible en:
 
 ### Servicios Docker disponibles
 
-Este repositorio incluye configuraciones Docker Compose para los siguientes servicios:
-
-#### AdGuard Home
-
-- **Función**: Servidor DNS que bloquea anuncios y trackers a nivel de red
-- **Puerto**: 80 (Admin Panel), 53 (DNS)
-- **Ubicación**: `docker/adguardhome/docker-compose.yml`
-- **Uso**:
-
-        cd docker/adguardhome
-        docker-compose up -d
-
-#### Home Assistant
-
-- **Función**: Plataforma de domótica para automatización del hogar
-- **Puerto**: 8123
-- **Ubicación**: `docker/homeassistant/docker-compose.yml`
-- **Uso**:
-
-        cd docker/homeassistant
-        docker-compose up -d
-
-#### Minecraft Server
-
-- **Función**: Servidor de Minecraft Java Edition
-- **Puerto**: 25565
-- **Versión**: 1.21.4
-- **Memoria**: 4GB
-- **Ubicación**: `docker/minecraftserver/docker-compose.yml`
-- **Uso**:
-
-        cd docker/minecraftserver
-        docker-compose up -d
-
-#### Watchtower
-
-- **Función**: Actualización automática de contenedores Docker
-- **Intervalo**: Cada hora (3600 segundos)
-- **Ubicación**: `docker/watchtower/docker-compose.yml`
-- **Uso**:
-
-        cd docker/watchtower
-        docker-compose up -d
-
-#### WatchYourLAN
-
-- **Función**: Monitor de red que detecta dispositivos conectados
-- **Puerto**: 8840
-- **Interfaces**: wlan0, eth0
-- **Ubicación**: `docker/watchyourlan/docker-compose.yml`
-- **Uso**:
-
-        cd docker/watchyourlan
-        docker-compose up -d
-
-### Comandos útiles de Docker
-
-    # Ver contenedores en ejecución
-    docker ps
-
-    # Ver todos los contenedores
-    docker ps -a
-
-    # Detener un contenedor
-    docker stop <nombre_contenedor>
-
-    # Eliminar un contenedor
-    docker rm <nombre_contenedor>
-
-    # Ver logs de un contenedor
-    docker logs <nombre_contenedor>
-
-    # Acceder a un contenedor
-    docker exec -it <nombre_contenedor> /bin/bash
+Este repositorio incluye configuraciones Docker Compose para armar servidores y tener servicios activos
+Acceder a la siguiente documentacion [docs/docker-containers.md]
 
 ## Actuadores probados
 
