@@ -10,16 +10,6 @@
     cd docker/dockhand
     docker compose up -d
 
-## AdGuard Home
-
-- **Función**: Servidor DNS que bloquea anuncios y trackers a nivel de red
-- **Puerto**: 80 (Admin Panel), 53 (DNS)
-- **Ubicación**: `docker/adguardhome/docker-compose.yml`
-- **Uso**:
-
-        cd docker/adguardhome
-        docker-compose up -d
-
 ## Home Assistant
 
 - **Función**: Plataforma de domótica para automatización del hogar
