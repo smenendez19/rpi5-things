@@ -1,0 +1,21 @@
+- Servicios:
+    - DockHand:
+        href: http://192.168.0.210:3000
+        description: "Gestor de servicios Docker"
+        server: docker
+        container: dockhand
+    - Pi-hole:
+        href: http://192.168.0.210:8088/admin
+        description: "DNS Privado"
+        server: docker
+        container: pihole
+    - Watch your lan:
+        href: http://192.168.0.210:8840
+        description: "Gestor de conexiones Wifi"
+        server: docker
+        container: watchyourlan
+    - Open-WebUI:
+        href: http://192.168.0.210:3001
+        description: "Chat de IA LLM Local"
+        server: docker
+        container: open-webui

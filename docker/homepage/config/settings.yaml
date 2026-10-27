@@ -1,0 +1,10 @@
+title: "Raspberry Pi 5"
+description: "Servicios activos en la RPI5"
+theme: "dark"
+color: "emerald"
+showStats: true
+
+layout:
+  Media:
+    style: row
+    columns: 4
