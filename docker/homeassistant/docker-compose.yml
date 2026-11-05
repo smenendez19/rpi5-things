@@ -2,11 +2,14 @@ services:
   homeassistant:
     container_name: homeassistant
     image: ghcr.io/home-assistant/home-assistant:stable
+    environment:
+      TZ: "America/­Argentina/­Buenos_Aires"
     volumes:
-      - ~/.dockerdata/homeassistant/config:/config
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
-    restart: always
+    restart: unless-stopped
+    stop_grace_period: 60s
     privileged: true
     ports:
       - "8123:8123"
