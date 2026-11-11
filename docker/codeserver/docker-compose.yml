@@ -8,6 +8,7 @@ services:
       - TZ=America/Argentina/Buenos_Aires
     volumes:
       - ./config:/config
+      - $HOME:/home/rpi5
     ports:
       - 8443:8443
     restart: unless-stopped

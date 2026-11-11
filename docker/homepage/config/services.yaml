@@ -33,4 +33,4 @@
         href: http://192.168.0.211:8443
         description: "Visual Studio Code en RPI5"
         server: docker
-        container: codeserver
+        container: code-server
