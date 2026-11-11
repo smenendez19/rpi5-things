@@ -3,8 +3,10 @@ description: "Servicios activos en la RPI5"
 theme: "dark"
 color: "emerald"
 showStats: true
+headerStyle: boxedWidgets
+language: es
 
 layout:
-  Media:
+  Servicios:
     style: row
     columns: 4

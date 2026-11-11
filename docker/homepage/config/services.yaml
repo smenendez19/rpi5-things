@@ -19,3 +19,18 @@
         description: "Chat de IA LLM Local"
         server: docker
         container: open-webui
+    - Gitea:
+        href: http://192.168.0.211:3003
+        description: "Git local"
+        server: docker
+        container: gitea
+    - Home Assistant:
+        href: http://192.168.0.211:8123
+        description: "Gestor de domotica"
+        server: docker
+        container: homeassistant
+    - Codeserver:
+        href: http://192.168.0.211:8443
+        description: "Visual Studio Code en RPI5"
+        server: docker
+        container: codeserver
