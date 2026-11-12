@@ -1,5 +1,6 @@
 services:
   mc:
+    container_name: minecraft-server
     image: itzg/minecraft-server:latest
     tty: true
     stdin_open: true
@@ -7,12 +8,13 @@ services:
       - "25565:25565/tcp"
     environment:
       EULA: "TRUE"
-      VERSION: "1.21.4"
+      VERSION: "26.3"
       MEMORY: "4096M"
+      MODE: "survival"
       MAX_PLAYERS: "5"
       MOTD: "Minecraft server in Raspberry PI"
       TZ: "America/Buenos_Aires"
-      DIFFICULTY: "3"
+      DIFFICULTY: "hard"
       SIMULATION_DISTANCE: "12"
       VIEW_DISTANCE: "12"
       SPAWN_PROTECTION: "0"
